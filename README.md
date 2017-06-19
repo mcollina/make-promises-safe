@@ -1,5 +1,4 @@
-# make-promises-safe &nbsp;&nbsp;[![Build
-Status](https://travis-ci.org/mcollina/make-promises-safe.svg?branch=master)](https://travis-ci.org/mcollina/make-promises-safe)
+# make-promises-safe &nbsp;&nbsp;[![Build Status](https://travis-ci.org/mcollina/make-promises-safe.svg?branch=master)](https://travis-ci.org/mcollina/make-promises-safe)
 
 A node.js module to make the use of promises safe.
 It implements the deprecation
