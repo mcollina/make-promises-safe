@@ -1,6 +1,9 @@
 # make-promises-safe
 
 A node.js module to make the use of promises safe.
+It implements the deprecation
+[DEP0018][unhandled] of Node.js for all runtimes. Using Promises without this module
+might cause file descriptor and memory leaks.
 
 ## The Problem
 
@@ -45,7 +48,7 @@ code of 1, just like any uncaught exception.
 ## Install
 
 ```
-npm install make-promises-safe
+npm install make-promises-safe --save
 ```
 
 ## Usage
@@ -87,3 +90,5 @@ node -r make-promises-safe server.js
 ## License
 
 MIT
+
+[unhandled]: https://nodejs.org/dist/latest-v8.x/docs/api/deprecations.html#deprecations_dep0018_unhandled_promise_rejections
