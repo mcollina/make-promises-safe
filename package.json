@@ -1,6 +1,6 @@
 {
   "name": "make-promises-safe",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Crash or abort if you get an unhandledRejection",
   "main": "make-promises-safe.js",
   "scripts": {

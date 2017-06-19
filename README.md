@@ -2,8 +2,9 @@
 
 A node.js module to make the use of promises safe.
 It implements the deprecation
-[DEP0018][unhandled] of Node.js for all runtimes. Using Promises without this module
-might cause file descriptor and memory leaks.
+[DEP0018][unhandled] of Node.js for all the supported versions of Node.js.
+Using Promises without this module might cause file descriptor and memory
+leaks.
 
 ## The Problem
 
