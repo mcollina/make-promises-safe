@@ -88,6 +88,13 @@ preloader:
 node -r make-promises-safe server.js
 ```
 
+### with core dumps
+
+You can also trigger a core dump when an unhandledRejection occurs by setting the enableRejectionCoreDumps environment variable. 
+
+```
+enableRejectionCoreDumps=true node server.js
+```
 ## License
 
 MIT
