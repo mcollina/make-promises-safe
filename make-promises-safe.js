@@ -9,9 +9,11 @@ if (process.listenerCount(event) === 0) {
 function setup () {
   process.on(event, function (err) {
     console.error(err)
-    if (process.env.enableRejectionCoreDumps) {
+    if (module.exports.abort) {
       process.abort()
     }
     process.exit(1)
   })
 }
+
+module.exports.abort = false
