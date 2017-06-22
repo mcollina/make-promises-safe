@@ -1,6 +1,6 @@
 'use strict'
 
-// require('.')
+// require('.').abort = true;
 const http = require('http')
 const server = http.createServer(handle)
 

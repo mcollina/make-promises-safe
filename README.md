@@ -88,6 +88,14 @@ preloader:
 node -r make-promises-safe server.js
 ```
 
+### with core dumps
+
+You can also create a core dump when an unhandled rejection occurs:
+
+
+```
+require('make-promises-safe').abort = true
+```
 ## License
 
 MIT
