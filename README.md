@@ -164,4 +164,5 @@ This feature is available only on Node >= 10.12.0.
 MIT
 
 [unhandled]: https://nodejs.org/dist/latest-v8.x/docs/api/deprecations.html#deprecations_dep0018_unhandled_promise_rejections
-[unhandled-event]: https://nodejs.org/dist/latest-v10.x/docs/api/process.html#process_event_unhandledrejection)
+[unhandled-event]: https://nodejs.org/dist/latest-v10.x/docs/api/process.html#process_event_unhandledrejection
+[multiple-event]: https://nodejs.org/dist/latest-v10.x/docs/api/process.html#process_event_multipleresolves
