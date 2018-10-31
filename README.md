@@ -5,10 +5,10 @@ It implements:
 
 1.  the deprecation [DEP0018][unhandled] of Node.js in versions >= 6, as
     using Promises without this module might cause file descriptor and memory
-    leak; follow [this](#unhandledRejection) for more details.
+    leak; follow [this](#the-unhandledrejection-problem) for more details.
 2.  exiting on multiple resolve or reject, as those could hide bugs that
-    will be completely silent; follow [this](#multipleResolves) for more
-    details.
+    will be completely silent; follow
+    [this](#promises-that-resolves-or-rejects-multiple-times) for more details.
 
 ## Install
 
