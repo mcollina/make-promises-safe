@@ -1,28 +1,19 @@
 'use strict'
 
-function install (event, cb) {
-  if (process.listenerCount(event) !== 0) {
-    return
-  }
+const event = 'unhandledRejection'
 
-  process.on(event, cb)
+if (process.listenerCount(event) === 0) {
+  setup()
 }
 
-install('unhandledRejection', function (err) {
-  console.error(err)
-  abortOrExit()
-})
-
-install('multipleResolves', function (type, promise, reason) {
-  console.error(type, promise, reason)
-  abortOrExit()
-})
-
-function abortOrExit () {
-  if (module.exports.abort) {
-    process.abort()
-  }
-  process.exit(1)
+function setup () {
+  process.on(event, function (err) {
+    console.error(err)
+    if (module.exports.abort) {
+      process.abort()
+    }
+    process.exit(1)
+  })
 }
 
 module.exports.abort = false
