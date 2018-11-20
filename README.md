@@ -1,8 +1,7 @@
 # make-promises-safe &nbsp;&nbsp;[![Build Status](https://travis-ci.org/mcollina/make-promises-safe.svg?branch=master)](https://travis-ci.org/mcollina/make-promises-safe)
 
 A node.js module to make the use of promises safe.
-It implements the deprecation
-[DEP0018][unhandled] of Node.js in versions 6, 7 and 8.
+It implements the deprecation [DEP0018][unhandled] of Node.js in versions 6+.
 Using Promises without this module might cause file descriptor and memory
 leaks.
 
