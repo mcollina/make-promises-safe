@@ -5,6 +5,9 @@ It implements the deprecation [DEP0018][unhandled] of Node.js in versions 6+.
 Using Promises without this module might cause file descriptor and memory
 leaks.
 
+**It is important that this module is only used in top-level program code, not
+in reusable modules!**
+
 ## The Problem
 
 Node.js crashes if there is an uncaught exception, while it does not
