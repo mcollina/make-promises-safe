@@ -23,3 +23,16 @@ test('crashes the process on unhandled rejection', (t) => {
     t.is(code, 1)
   })
 })
+
+test('logs error', (t) => {
+  t.plan(1)
+
+  const child = spawn(process.execPath, ['-r', main, '-e', 'require("./make-promises-safe").logError = console.log; Promise.reject(new Error(\'kaboom\'))'])
+
+  child.stdout.on('data', function (chunk) {
+    const expected = `Error: kaboom
+    at [eval]:1:72`
+
+    t.ok(chunk.toString().trim().indexOf(expected.trim()) === 0)
+  })
+})

@@ -99,18 +99,15 @@ You can also create a core dump when an unhandled rejection occurs:
 require('make-promises-safe').abort = true
 ```
 
-### With custom logger
+### With custom logging
 
-You can add a custom logger to log errors in your own format. The custom logger must implement an `error` function that takes a single `Error` parameter. This defaults to `console.error`.
+You can add a custom logger to log errors in your own format. To do this override the `logError` property with a function that takes a single `Error` parameter. This defaults to `console.error`.
 
 ```
 const makePromisesSafe = require('make-promises-safe');
-const logger = {
-  error: function(err) {
-    // log the err object
-  }
-};
-makePromisesSafe.logger = logger
+makePromisesSafe.logError = function(err) {
+  // log the err object
+}
 ```
 
 ## License
