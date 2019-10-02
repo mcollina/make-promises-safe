@@ -3,7 +3,7 @@
 const event = 'unhandledRejection'
 
 process.on(event, function (err) {
-  console.error(err)
+  module.exports.logError(err)
   if (module.exports.abort) {
     process.abort()
   }
@@ -11,3 +11,5 @@ process.on(event, function (err) {
 })
 
 module.exports.abort = false
+
+module.exports.logError = console.error

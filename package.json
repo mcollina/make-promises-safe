@@ -26,6 +26,7 @@
   "homepage": "https://github.com/mcollina/make-promises-safe#readme",
   "devDependencies": {
     "pre-commit": "^1.2.2",
+    "sinon": "^7.5.0",
     "snazzy": "^7.0.0",
     "standard": "^10.0.2",
     "tap": "^10.3.3"
