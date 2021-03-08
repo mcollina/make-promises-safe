@@ -1,5 +1,13 @@
 # make-promises-safe &nbsp;&nbsp;[![Build Status](https://travis-ci.org/mcollina/make-promises-safe.svg?branch=master)](https://travis-ci.org/mcollina/make-promises-safe)
 
+### A Happy Note
+
+If you are using Node.s version 15+, the correct promise behaviour is already implemented and Node.js will safely behave on unhandled rejections similarly to its uncaught exception behaviour. If you are only using Node.js v15+ there is no need to use this module.
+
+If you need to support older versions of Node.js - it is a good idea to use this module to ensure future compatibility with modern Node.js versions where the safe behaviour is the default one.
+
+## What this is
+
 A node.js module to make the use of promises safe.
 It implements the deprecation [DEP0018][unhandled] of Node.js in versions 6+.
 Using Promises without this module might cause file descriptor and memory
